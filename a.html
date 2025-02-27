@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="heatmap"></div>
+
+    <script>
+        // Example co-occurrence matrix (rows = samples, cols = leiden clusters)
+        let dataMatrix = [
+            [10, 200, 5, 40],   // Sample 1
+            [50, 30, 400, 10],  // Sample 2
+            [100, 20, 10, 60]   // Sample 3
+        ];
+
+        // Convert to log10 scale (avoid log(0) by adding 1)
+        let logMatrix = dataMatrix.map(row => row.map(value => Math.log10(value + 1)));
+
+        let heatmapData = [{
+            z: logMatrix,  // Log-transformed data
+            type: "heatmap",
+            colorscale: "Blues",  // Change color theme
+            showscale: true
+        }];
+
+        let layout = {
+            title: "Log10-Transformed Co-occurrence Heatmap",
+            xaxis: { title: "Leiden Cluster" },
+            yaxis: { title: "Sample" }
+        };
+
+        Plotly.newPlot("heatmap", heatmapData, layout);
+    </script>
+</body>
+</html>
+
