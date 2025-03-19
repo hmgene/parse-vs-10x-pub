@@ -1,0 +1,14 @@
+cell_type	markers
+immune-cell	PTPRC
+oligo	THY1,PLP1,APOD
+pericyte	PDGFRB,MCAM
+endothelial	PECAM1,ACTA2
+cdc	HLA-DRA,HLA-DRB1,HLA-DPB1,AREG,FCER1A,LAMP3
+neutrophil	S100A8,IFITM2,FCGR3B
+monocyte	LYZ,VCAN,FN1
+b-cell	MS4A1
+plasma	SDC1
+mast-cell	MS4A2,KIT
+myeloid-cell	MPO,ITGAM,ITGAX,GPNMB,TMEM119,MRC1,CD163,IL1B,CD83,CCL3,CD68,FUT4
+t-cell	CD3E
+glioma-cell	EGFR,PTPRZ1,CSRP2,AQP4,SOX2
